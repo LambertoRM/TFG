@@ -21,4 +21,5 @@ Para ello se han empleado las siguientes tecnologías:
 
 ## Desarrollo del proyecto
 A continuación muestro un gráfico de cuál sería la lógica del proyecto a gran escala con algunas las tecnologías más importantes representadas:
-<img src="
+<br>
+<img style="color:#FFFFFF;" src="https://github.com/LambertoRM/TFG/blob/main/img%20readme/Estructura_TFG.png">
