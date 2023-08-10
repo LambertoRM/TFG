@@ -1,3 +1,6 @@
+# Made by Lamberto Ruiz Martínez
+# GitHub: https://github.com/LambertoRM/
+
 import openai
 
 openai.api_key = "MI-API-KEY"

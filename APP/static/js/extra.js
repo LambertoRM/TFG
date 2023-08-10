@@ -1,3 +1,8 @@
+/*
+    Made by Lamberto Ruiz Martínez
+    GitHub: https://github.com/LambertoRM/
+*/
+
 function imagen_subida(){
     document.getElementById('archivo').onchange = function () {
         console.log(this.value);

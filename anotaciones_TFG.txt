@@ -1,3 +1,6 @@
+# Made by Lamberto Ruiz Martínez
+# GitHub: https://github.com/LambertoRM/
+
 Bibliografía inicial
 Yolo v5:
 https://blog.paperspace.com/train-yolov5-custom-data/

@@ -1,3 +1,6 @@
+# Made by Lamberto Ruiz Martínez
+# GitHub: https://github.com/LambertoRM/
+
 from flask import Flask, render_template, request, abort, redirect, url_for
 from random import sample
 
