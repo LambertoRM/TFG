@@ -1,0 +1,66 @@
+Bibliografía inicial
+Yolo v5:
+https://blog.paperspace.com/train-yolov5-custom-data/
+API recetas:
+https://www.mulesoft.com/programmableweb
+Data set de comida:
+http://foodcam.mobi/dataset256.html
+http://www.ub.edu/cvub/egocentricfood/
+https://www.v7labs.com/open-datasets/oktoberfest-food-dataset
+Data set fotos neveras:
+https://universe.roboflow.com/karel-cornelis-q2qqg/aicook-lcv4d
+https://universe.roboflow.com/aicook/aicook-self-annotated/dataset/4
+https://universe.roboflow.com/converttoyolov5-ljzpr/convertoyolov5cocotest/dataset/1
+
+DATASETS BUENO
+https://universe.roboflow.com/aicook/aicook-self-annotated/dataset/4
+https://universe.roboflow.com/masterchef/smarterchef/dataset/5
+https://universe.roboflow.com/tk-matima-unqyz/food-in-fridge-2slx4/dataset/1
+https://universe.roboflow.com/unai-aguinaco/gh-xmjfz/dataset/1
+
+IMAGENES USADAS:
+4079 TRAIN
+423 TEST
+797 VALID	
+
+COMANDO PARA COMPRIMIR
+tar -cvf resultados100m.tar trainm_100_20/*
+
+ANACONDA COMANDS
+conda activate <name> (base es el del sistema)
+conda create --name <nombre> (creamos un entorno de config virtual)
+conda <name> export > enviorement.yml (exportamos la config a archivo .yml)
+conda <name> create -f enviorement.yml (importamos en el entorno del servidor)
+
+which pip (vemos en que config estamos)
+pip install (-r <file>) (instalamos cosas en el perfil que queremos y con -r una lista de paquetes anotados en un archivo .txt)
+
+EJECUTAR APP WEB UBUNTU
+export FLASK_APP=app.py
+flask run
+
+EXPORTAR APP WEB WINDOWS
+env\Scripts\activate
+set FLASK_APP=app.py
+set FLASK_ENV=development O production
+flask run --host 0.0.0.0
+
+----------------------------------------------------------
+
+COMANDO PARA ENTRENAR:
+python train.py --img 640 --cfg yolov5s.yaml --hyp hyp.scratch-low.yaml --batch 32 --epochs 500 --data ./data/data.yaml --weights yolov5s.pt --workers 24 --name train_dataset_mega --patience 0
+
+python train.py --img 640 --cfg yolov5s.yaml --hyp hyp.scratch-low.yaml --batch 64 --epochs 500 --data ./data/data.yaml --weights yolov5s.pt --workers 24 --name train_dataset_v4                    
+
+COMANDO PARA TEST:
+!python test.py --weights ./runs/train/yolo_fridge_train22/weights/best.pt --data data.yaml --task test --name yolo_fridge_test
+
+python val.py --weights ./runs/train/yolo_fridge_train22/weights/best.pt --data ./data/data.yaml --img 640
+
+COMANDO PARA DETECTAR:
+python detect.py --source ./data/imagen.jpg --weights runs/train/train_dataset_v2/weights/best.pt --conf 0.25 --name detect_fridge_vx
+
+EJECTUANDO CON 150 EPOCAS EL MEGA DATASET
+python train.py --img 640 --cfg yolov5x.yaml --hyp hyp.scratch-low.yaml --batch 32 --epochs 100 --data ./data/mega_dataset/data.yaml --workers 24 --name train_mega_100x --patience 0
+
+python train.py --img 640 --cfg yolov5l.yaml --hyp hyp.scratch-low.yaml --batch 16 --epochs 100 --data ./data/mega_dataset/data.yaml --workers 24 --name trainl_100_20 --patience 0

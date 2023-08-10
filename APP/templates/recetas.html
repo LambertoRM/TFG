@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Posibles {{ elem }} recetas</h1>
+    <div id="columnas">
+        <div class="posibles-recetas">
+            <h4>Ingredientes detectados:</h4>
+        
+            {% for i in ing %}
+            <label>{{ ing[i] }} {{ i }}</label><br>
+            {% endfor %}
+        
+        </div>
+        <div class="posibles-recetas">
+            <h4>Posibles {{ elem }} recetas:</h4>
+            
+            {% for i in recet %}
+            <label>{{ recet[i] }} {{ i }}</label><br>
+            {% endfor %}
+            <div class="div-boton-enviar">
+                <a class="nav-link" href="{{ url_for('modificar_recetas')}}"><button onClick="gif()" type="submit" class="boton-recetas">Quiero 10 recetas diferentes</button></a>
+            </div>
+            <div class="div-boton-enviar">
+                <img src="/static/imagenes_app/loading.gif" width="10%" id="loading_gif">
+            </div>
+        </div>
+
+        <div class="div-boton-enviar">
+            <a class="nav-link" href="{{ url_for('index')}}"><button type="submit" class="boton-recetas">Volver a inicio</button></a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="banner-home">
+        <h1>{% block title %} Nevera Inteligente {% endblock %}</h1>
+        <h3>Bienvenidos a mi Trabajo Final de Grado sobre el reconocimiento de imágenes</h3>
+        
+    </div>
+    <br>    
+    <div id="columnas">
+        <div class="primer_div">    
+            <p>El reconocimiento de imágenes es una de las áreas más emocionantes y en constante evolución en el campo de la inteligencia artificial. Con la creciente cantidad de datos visuales disponibles en la actualidad, la capacidad de las máquinas para procesar y entender imágenes se ha vuelto cada vez más importante en nuestra vida cotidiana. Desde la búsqueda de imágenes en línea hasta la detección de objetos en la seguridad del aeropuerto, el reconocimiento de imágenes tiene una amplia gama de aplicaciones en una variedad de industrias.</p>
+
+            <p>En este proyecto abordaremos el reconocimiento de imágenes de neveras, en las cuales habrá alimentos que la aplicación tendrá que reconocer para poder así saber qué podremos cocinar o darnos algunas ideas con lo que tengamos en nuestra nevera.</p>
+
+            <p>Esta es la aplicación web del proyecto, con la cual podrás hacer o subir una foto desde tu teléfono móvil u ordenador y obtener 5, 10 o 20 posibles recetas.</p>
+            
+            <p>Por último, es importante destacar que las recetas pueden resultar un poco extrañas ya que se emplea la API de ChatGPT para obtenerlas y a veces no son tan buenas.</p>
+        </div>
+        <div>
+            <h3>Este sería el esquema de la aplicación de forma resumida:</h3>
+            <center><img src="/static/imagenes_app/esquema_app.png" width="100%" style="margin-top: 30px;"></center>
+        </div>
+    </div>
+    <div class="div-boton-enviar">
+        <a class="nav-link" href="{{ url_for('imagen')}}"><button type="submit" class="boton-recetas">¡Sube tu imagen!</button></a>
+    </div>
+{% endblock %}

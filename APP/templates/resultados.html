@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Alimentos detectados</h1>    
+    <div id="columnas">
+        <div class="posibles-recetas">
+            <h3>Estos son los ingredientes/alimentos que hemos podido detectar de tu nevera.</h3>
+        
+            {% for i in ing %}
+            <label>{{ ing[i] }} {{ i }}</label><br>
+            {% endfor %}
+        
+            <p style="text-align: center;">Elige el número de recetas que quieres obtener con estos ingredientes <br> (es posbile que te salgan recetas con ingredientes que no hayan sido detectados):</p>
+            <a href="{{ url_for('openai_recetas_5')}}"><button onClick="gif()" type="submit" class="boton-recetas">Ver 5 recetas</button></a>
+            <a href="{{ url_for('openai_recetas_10')}}"><button onClick="gif()" type="submit" class="boton-recetas">Ver 10 recetas</button></a>
+            <a href="{{ url_for('openai_recetas_20')}}"><button onClick="gif()" type="submit" class="boton-recetas">Ver 20 recetas</button></a>
+            <div class="div-boton-enviar">
+                <img src="/static/imagenes_app/loading.gif" width="10%" id="loading_gif">
+            </div>
+        </div>
+        <div>
+            <center><img src = "{{ imagen }}" width="100%"></center>
+            <p style="text-align: center;">Esta es tu imagen ya procesada, la red neuronal marca con un recuadro de un color cada alimento que ha detectado junto con la seguridad de 0 a 1 (cuanto más se acerca al 1 más segura está de que ese alimento lo ha detectado bien).</p>
+        </div>
+    </div>
+{% endblock %}

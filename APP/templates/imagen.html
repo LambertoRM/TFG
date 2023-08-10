@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Subir imagen</h1>
+
+    <h3>Sube una imagen de tu nevera para que podamos procesarla y decirte qué ingredientes hemos reconocido:</h3>
+    <form action="{{ url_for('imagen') }}" method="POST" autocomplete="off" enctype="multipart/form-data">
+        
+        <div class="custom-file">
+            <input type="file" name="archivo" class="custom-file-input" id="archivo" required>
+            <label class="custom-file-label" for="archivo" id="label_archivo">Selecciona una imagen...</label>
+            <script>
+                imagen_subida()
+            </script>
+            
+        </div>
+
+        <div class="div-boton-enviar">
+            <button onClick="gif()" id="boton-enviar" type="submit">Enviar imagen</button>
+        </div>
+        <div class="div-boton-enviar">
+            <img src="/static/imagenes_app/loading.gif" width="5%" id="loading_gif">
+        </div>
+
+    </form>
+
+
+{% endblock %}
