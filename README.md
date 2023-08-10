@@ -17,6 +17,7 @@
 2. [Desarrollo del proyecto](#Desarrollo-del-proyecto)
 3. [Comandos y demás ayudas](#Comandos-y-demás-ayudas)
 4. [Posibles mejoras](#Posibles-mejoras)
+5. [Conclusión y finalidad](#Conclusión-y-finalidad)
 
 ## Introducción del proyecto
 Este proyecto consiste, mediante el reconocimiento de alimentos dentro de una nevera, en obtener recetas que podríamos realizar con los alimentos detectados previamente.<br>
@@ -29,7 +30,7 @@ Para ello se han empleado las siguientes tecnologías:
 * Otras tecnologías.
 <br><br>
 
-Podeís obtener más información y mucho más extendida del proyecto en <a href="https://github.com/LambertoRM/TFG/blob/main/TFG_Lamberto.pdf">la memoria del mismo. En ella entro en detalles sobre por ejemplo, cómo se unifican los datasets, cómo he entrenado la red, qué pruebas he hecho, etc. <b>MUY RECOMENDABLE</b> echarle un vistazo antes de intentar entender el código.
+Podeís obtener más información y mucho más extendida del proyecto en <a href="https://github.com/LambertoRM/TFG/blob/main/TFG_Lamberto.pdf">la memoria</a> del mismo. En ella entro en detalles sobre por ejemplo, cómo se unifican los datasets, cómo he entrenado la red, qué pruebas he hecho, etc. <b>MUY RECOMENDABLE</b> echarle un vistazo antes de intentar entender el código.
 
 ## Desarrollo del proyecto
 A continuación muestro un gráfico de cuál sería la lógica del proyecto a gran escala con algunas las tecnologías más importantes representadas:
@@ -74,3 +75,10 @@ cambiando o añadiendo.</li>
 los resultados obtenidos.</li>
 <li>Cambiando la forma de extraer las recetas utilizando por ejemplo un dataset de recetas
 u otra tecnología.</li></ol>
+
+## Conclusión y finalidad
+<br>
+Como conclusión, destacar que he subido el proyecto porque ha sido bastante grande e importante para mí y tenerlo en la nube hace que nunca vaya a desaparecer.
+<br><br>
+Por otro lado, quería compartirlo con la comunidad para ver hasta dónde puede llegar mi idea así que por favor, si realizaís algún avance o mejora ponte en contacto conmigo para saber qué mejoras o qué has hecho exactamente. El código es completamente LIBRE de utilizar siempre y cuando no sea con fines comerciales (y si lo son comentadme algo por lo menos :D).
+<br><br>
